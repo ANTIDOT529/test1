@@ -3,47 +3,6 @@ let currentCaptcha = '';
 let slideIndex = 0;
 let slideInterval;
 
-// === МОБИЛЬНОЕ МЕНЮ ===
-
-function initMobileMenu() {
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const mainNav = document.querySelector('nav');
-    
-    if (mobileMenuToggle && mainNav) {
-        mobileMenuToggle.addEventListener('click', function() {
-            mainNav.classList.toggle('active');
-            
-            // Меняем иконку меню
-            if (mainNav.classList.contains('active')) {
-                this.innerHTML = '✕';
-                this.setAttribute('aria-label', 'Закрыть меню');
-            } else {
-                this.innerHTML = '☰';
-                this.setAttribute('aria-label', 'Открыть меню');
-            }
-        });
-        
-        // Закрытие меню при клике на ссылку
-        const navLinks = mainNav.querySelectorAll('a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                mainNav.classList.remove('active');
-                mobileMenuToggle.innerHTML = '☰';
-                mobileMenuToggle.setAttribute('aria-label', 'Открыть меню');
-            });
-        });
-        
-        // Закрытие меню при клике вне его области
-        document.addEventListener('click', function(e) {
-            if (!mainNav.contains(e.target) && !mobileMenuToggle.contains(e.target) && mainNav.classList.contains('active')) {
-                mainNav.classList.remove('active');
-                mobileMenuToggle.innerHTML = '☰';
-                mobileMenuToggle.setAttribute('aria-label', 'Открыть меню');
-            }
-        });
-    }
-}
-
 // === ФУНКЦИИ ВАЛИДАЦИИ ФОРМЫ ===
 
 // Валидация имени
@@ -540,11 +499,10 @@ document.addEventListener('DOMContentLoaded', function() {
     initFormValidation();
     initScrollToTop();
     initSmoothScroll();
-    initMobileMenu();
     
     console.log('All components initialized');
 });
 
 // Глобальные функции для полноэкранного режима
 window.openFullscreenImage = openFullscreenImage;
-window.closeFullscreenImage = closeFullscreenImage;
+window.closeFullscreenImage = closeFullscreenImage;Ы
