@@ -399,6 +399,37 @@ function initFirstSlider() {
     }
 }
 
+// === МОБИЛЬНОЕ МЕНЮ ===
+
+function initMobileMenu() {
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+        
+        // Закрытие меню при клике на ссылку
+        const navLinks = navMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('active');
+                menuToggle.classList.remove('active');
+            });
+        });
+        
+        // Закрытие меню при клике вне его области
+        document.addEventListener('click', function(e) {
+            if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+                navMenu.classList.remove('active');
+                menuToggle.classList.remove('active');
+            }
+        });
+    }
+}
+
 // === ПОЛНОЭКРАННЫЙ РЕЖИМ ===
 
 function openFullscreenImage(element) {
@@ -497,6 +528,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initFirstSlider();
     initCaptcha();
     initFormValidation();
+    initMobileMenu();
     initScrollToTop();
     initSmoothScroll();
     
@@ -505,4 +537,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Глобальные функции для полноэкранного режима
 window.openFullscreenImage = openFullscreenImage;
-window.closeFullscreenImage = closeFullscreenImage;Ы
+window.closeFullscreenImage = closeFullscreenImage;
