@@ -572,7 +572,7 @@ footer {
         text-align: center;
         font-size: 18px;
         white-space: normal;
-        margin-bottom: 371px; /* Сохраняем оригинальный отступ для структуры */
+        margin-bottom: 20px; /* УБИРАЕМ большой отступ для мобильной версии */
     }
     
     nav {
@@ -588,7 +588,7 @@ footer {
         flex-wrap: wrap;
         gap: 8px;
         padding: 0 10px;
-        margin-bottom: 350px; /* Сохраняем оригинальный отступ для структуры */
+        margin-bottom: 20px; /* УБИРАЕМ большой отступ для мобильной версии */
     }
     
     nav li {
@@ -608,7 +608,7 @@ footer {
         width: 100%;
         margin-left: 0;
         height: 300px;
-        margin-top: 30px; /* Достаточный отступ сверху чтобы слайдер не перекрывал шапку */
+        margin-top: 20px; /* Уменьшаем отступ сверху чтобы убрать пробел */
         z-index: 1; /* Убеждаемся, что слайдер ниже шапки */
     }
     
@@ -645,7 +645,7 @@ footer {
         font-size: 16px;
         margin-bottom: 10px;
         padding: 0 10px;
-        margin-bottom: 371px; /* Сохраняем структуру */
+        margin-bottom: 20px; /* УБИРАЕМ большой отступ для мобильной версии */
     }
     
     .logo img {
@@ -655,7 +655,7 @@ footer {
     
     nav ul {
         gap: 5px;
-        margin-bottom: 350px; /* Сохраняем структуру */
+        margin-bottom: 20px; /* УБИРАЕМ большой отступ для мобильной версии */
     }
     
     nav a {
@@ -665,7 +665,7 @@ footer {
     
     .slider-container {
         height: 250px;
-        margin-top: 25px; /* Сохраняем отступ сверху */
+        margin-top: 15px; /* Уменьшаем отступ сверху чтобы убрать пробел */
     }
     
     .text_o_nas {
@@ -686,7 +686,7 @@ footer {
     
     .site-title {
         font-size: 14px;
-        margin-bottom: 371px; /* Сохраняем структуру */
+        margin-bottom: 20px; /* УБИРАЕМ большой отступ для мобильной версии */
     }
     
     nav a {
@@ -695,12 +695,12 @@ footer {
     }
     
     nav ul {
-        margin-bottom: 350px; /* Сохраняем структуру */
+        margin-bottom: 20px; /* УБИРАЕМ большой отступ для мобильной версии */
     }
     
     .slider-container {
         height: 200px;
-        margin-top: 25px; /* Сохраняем отступ сверху */
+        margin-top: 15px; /* Уменьшаем отступ сверху чтобы убрать пробел */
     }
 }
 
@@ -714,4 +714,3 @@ footer {
         margin-top: -300px; /* Оригинальное значение для десктопа */
     }
 }
-
