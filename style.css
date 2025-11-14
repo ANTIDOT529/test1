@@ -175,6 +175,7 @@ body {
     font-family: Verdana, Geneva, sans-serif;
     margin-left: auto; 
     margin-right: auto;  
+    margin-top: 40px; /* Добавляем отступ сверху для десктопной версии */
 }
 
 .column-container {
@@ -608,8 +609,14 @@ footer {
         width: 100%;
         margin-left: 0;
         height: 300px;
-        margin-top: 20px; /* Уменьшаем отступ сверху чтобы убрать пробел */
+        margin-top: 20px; /* Отступ от шапки до слайдера */
+        margin-bottom: 20px; /* Добавляем отступ снизу для одинакового расстояния */
         z-index: 1; /* Убеждаемся, что слайдер ниже шапки */
+    }
+    
+    /* Устанавливаем одинаковые отступы для заголовка "о нашей студии" */
+    .text_o_nas {
+        margin-top: 20px; /* Такой же отступ как между шапкой и слайдером */
     }
     
     .column-container, .column-container1 {
@@ -633,6 +640,11 @@ footer {
         margin-left: 0;
         height: 400px;
         margin-top: 20px;
+        margin-bottom: 20px; /* Добавляем отступ снизу */
+    }
+    
+    .text_o_nas {
+        margin-top: 20px; /* Такой же отступ как между шапкой и слайдером */
     }
 }
 
@@ -665,12 +677,14 @@ footer {
     
     .slider-container {
         height: 250px;
-        margin-top: 15px; /* Уменьшаем отступ сверху чтобы убрать пробел */
+        margin-top: 20px; /* Сохраняем одинаковый отступ */
+        margin-bottom: 20px; /* Сохраняем одинаковый отступ */
     }
     
     .text_o_nas {
         width: 95%;
         font-size: 16px;
+        margin-top: 20px; /* Такой же отступ как между шапкой и слайдером */
     }
     
     .name {
@@ -700,7 +714,12 @@ footer {
     
     .slider-container {
         height: 200px;
-        margin-top: 15px; /* Уменьшаем отступ сверху чтобы убрать пробел */
+        margin-top: 20px; /* Сохраняем одинаковый отступ */
+        margin-bottom: 20px; /* Сохраняем одинаковый отступ */
+    }
+    
+    .text_o_nas {
+        margin-top: 20px; /* Такой же отступ как между шапкой и слайдером */
     }
 }
 
@@ -712,5 +731,10 @@ footer {
         height: 600px;
         margin-left: -130px;
         margin-top: -300px; /* Оригинальное значение для десктопа */
+        margin-bottom: 0; /* Сбрасываем отступ снизу для десктопа */
+    }
+    
+    .text_o_nas {
+        margin-top: 40px; /* Оригинальный отступ для десктопа */
     }
 }
